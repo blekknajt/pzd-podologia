@@ -365,6 +365,7 @@ strong {
   font-weight: 500;
   color: var(--ink-soft);
   padding: 0.35rem 0;
+  white-space: nowrap;
   transition: color var(--transition);
 }
 
@@ -399,6 +400,11 @@ strong {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.header-actions .btn {
+  white-space: nowrap;
 }
 
 .nav-toggle {
@@ -1622,7 +1628,13 @@ strong {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1120px) {
+  .nav-list {
+    gap: 1.15rem;
+  }
+}
+
+@media (max-width: 1040px) {
   .nav-toggle {
     display: inline-flex;
   }
@@ -1667,7 +1679,9 @@ strong {
     padding-top: 1.5rem;
     border-top: 1px solid var(--border);
   }
+}
 
+@media (max-width: 860px) {
   .pricing-grid,
   .cases-grid,
   .services-detailed-list {
