@@ -42,7 +42,7 @@
       <div class="hero-frame">
         {{- with $m.heroPortrait -}}
           <div class="hero-photo-wrap">
-            <img src="{{ . | relURL }}" alt="{{ site.Params.brandFull }} — mgr Patrycja Zakrzewska-Dworczak" class="hero-photo" loading="eager">
+            <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ site.Params.brandFull }} — mgr Patrycja Zakrzewska-Dworczak" class="hero-photo" loading="eager">
           </div>
         {{- else -}}
           <div class="hero-monogram-panel" aria-label="PZD Podologia — mgr Patrycja Zakrzewska-Dworczak">
@@ -72,7 +72,7 @@
     <div class="about-intro-grid">
       {{- with $m.clinicInterior }}
       <figure class="about-portrait">
-        <img src="{{ . | relURL }}" alt="mgr Patrycja Zakrzewska-Dworczak w gabinecie PZD Podologia" loading="lazy">
+        <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="mgr Patrycja Zakrzewska-Dworczak w gabinecie PZD Podologia" loading="lazy">
         <figcaption>mgr Patrycja Zakrzewska-Dworczak &mdash; gabinet PZD Podologia, Budziechów 88</figcaption>
       </figure>
       {{- end }}
@@ -88,7 +88,7 @@
         </p>
 
         <div class="about-actions">
-          <a href="{{ "/o-gabinecie/" | relURL }}" class="btn btn-outline">Więcej o gabinecie i standardach</a>
+          <a href="{{ "o-gabinecie/" | relURL }}" class="btn btn-outline">Więcej o gabinecie i standardach</a>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
         <p class="eyebrow">Zakres usług</p>
         <h2 class="section-title">W czym mogę Ci pomóc</h2>
       </div>
-      <a href="{{ "/zabiegi/" | relURL }}" class="text-link">Zobacz szczegółowy opis zabiegów &rarr;</a>
+      <a href="{{ "zabiegi/" | relURL }}" class="text-link">Zobacz szczegółowy opis zabiegów &rarr;</a>
     </div>
 
     <div class="services-grid">
@@ -180,7 +180,7 @@
         <p class="eyebrow">Oficjalny cennik</p>
         <h2 class="section-title">Cennik zabiegów podologicznych</h2>
       </div>
-      <a href="{{ "/cennik/" | relURL }}" class="text-link">Otwórz osobny cennik &rarr;</a>
+      <a href="{{ "cennik/" | relURL }}" class="text-link">Otwórz osobny cennik &rarr;</a>
     </div>
 
     {{ partial "pricing-table.html" . }}
@@ -205,8 +205,9 @@
       {{- $fit := .fit | default "cover" }}
       <article class="case-card">
         {{- with .image }}
-        <button type="button" class="case-media case-media--{{ $fit }}" data-lightbox-src="{{ . | relURL }}" data-lightbox-caption="{{ $caseTitle }}" aria-label="Powiększ zdjęcie: {{ $caseTitle }}">
-          <img src="{{ . | relURL }}" alt="{{ $caseTitle }}" loading="lazy">
+        {{- $imgUrl := . | strings.TrimPrefix "/" | relURL }}
+        <button type="button" class="case-media case-media--{{ $fit }}" data-lightbox-src="{{ $imgUrl }}" data-lightbox-caption="{{ $caseTitle }}" aria-label="Powiększ zdjęcie: {{ $caseTitle }}">
+          <img src="{{ $imgUrl }}" alt="{{ $caseTitle }}" loading="lazy">
           <span class="case-zoom-hint" aria-hidden="true">Powiększ</span>
         </button>
         {{- end }}

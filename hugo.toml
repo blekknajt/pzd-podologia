@@ -1,4 +1,4 @@
-baseURL = "https://pzdpodologia.pl/"
+baseURL = "https://blekknajt.github.io/pzd-podologia/"
 locale = "pl-PL"
 defaultContentLanguage = "pl"
 title = "PZD Podologia — mgr Patrycja Zakrzewska-Dworczak | Gabinet Podologiczny Lubsko"
@@ -68,7 +68,7 @@ disableKinds = ["taxonomy", "term"]
 
   [params.media]
     logo = ""
-    heroPortrait = "/images/patrycja-hero.jpg"
-    clinicInterior = "/images/patrycja-gabinet.jpg"
-    clinicExterior = "/images/gabinet-budynek.jpg"
-    ogImage = "/images/patrycja-hero.jpg"
+    heroPortrait = "images/patrycja-hero.jpg"
+    clinicInterior = "images/patrycja-gabinet.jpg"
+    clinicExterior = "images/gabinet-budynek.jpg"
+    ogImage = "images/patrycja-hero.jpg"

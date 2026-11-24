@@ -31,5 +31,5 @@ lead: "Poniższy regulamin określa zasady korzystania z usług Gabinetu Podolog
 
 ## § 5. Płatności i reklamacje
 
-1. Płatności za usługi można dokonać **gotówką lub BLIKiem** (zgodnie z informacją w recepcji). Aktualny [cennik usług](/cennik/) jest dostępny w lokalu oraz na stronie internetowej.
+1. Płatności za usługi można dokonać **gotówką lub BLIKiem** (zgodnie z informacją w recepcji). Aktualny [cennik usług]({{< relref "cennik" >}}) jest dostępny w lokalu oraz na stronie internetowej.
 2. Ewentualne reklamacje dotyczące wykonanej usługi należy zgłaszać mailowo (`pzd.podologia@gmail.com`) lub telefonicznie niezwłocznie po zauważeniu nieprawidłowości. Reklamacja obejmuje **7 dni** od wykonania zabiegu, ale nie obejmuje powikłań wynikających z zatajenia informacji o stanie zdrowia lub nieprzestrzegania zaleceń pozabiegowych.

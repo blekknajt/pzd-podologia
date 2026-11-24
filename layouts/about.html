@@ -35,7 +35,7 @@
     <aside class="about-aside">
       {{- with $m.clinicInterior }}
       <figure class="about-photo-card">
-        <img src="{{ . | relURL }}" alt="mgr Patrycja Zakrzewska-Dworczak w gabinecie PZD Podologia" loading="lazy">
+        <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="mgr Patrycja Zakrzewska-Dworczak w gabinecie PZD Podologia" loading="lazy">
       </figure>
       {{- end }}
 

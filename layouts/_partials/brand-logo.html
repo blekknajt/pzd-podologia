@@ -1,5 +1,5 @@
 {{- with site.Params.media.logo -}}
-  <img src="{{ . | relURL }}" alt="{{ site.Params.brandFull }}" class="brand-logo-img" height="44">
+  <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ site.Params.brandFull }}" class="brand-logo-img" height="44">
 {{- else -}}
   <span class="brand-wordmark" aria-label="{{ site.Params.brandFull }}">
     <span class="brand-monogram" aria-hidden="true">

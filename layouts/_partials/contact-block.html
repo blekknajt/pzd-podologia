@@ -71,7 +71,7 @@
     <div class="location-panel">
       {{- with site.Params.media.clinicExterior }}
       <div class="location-photo">
-        <img src="{{ . | relURL }}" alt="Wejście do gabinetu PZD Podologia — Budziechów 88 (Studio Dobry Ruch)" loading="lazy">
+        <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="Wejście do gabinetu PZD Podologia — Budziechów 88 (Studio Dobry Ruch)" loading="lazy">
       </div>
       {{- end }}
       <div class="location-copy">

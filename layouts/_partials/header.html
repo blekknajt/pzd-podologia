@@ -1,6 +1,6 @@
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand-link" href="{{ "/" | relURL }}">
+    <a class="brand-link" href="{{ "" | relURL }}">
       {{ partial "brand-logo.html" . }}
     </a>
 
@@ -8,9 +8,10 @@
       <ul class="nav-list">
         {{- $currentRel := .RelPermalink -}}
         {{- range site.Menus.main }}
-          {{- $isActive := eq $currentRel .URL -}}
+          {{- $href := .URL -}}
+          {{- $isActive := eq $currentRel $href -}}
           <li>
-            <a href="{{ .URL | relURL }}" class="nav-link{{ if $isActive }} is-active{{ end }}"{{ if $isActive }} aria-current="page"{{ end }}>
+            <a href="{{ $href }}" class="nav-link{{ if $isActive }} is-active{{ end }}"{{ if $isActive }} aria-current="page"{{ end }}>
               {{ .Name }}
             </a>
           </li>
