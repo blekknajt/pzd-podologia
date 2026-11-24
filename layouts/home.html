@@ -10,7 +10,7 @@
       <p class="eyebrow">Gabinet Podologiczny &bull; {{ site.Params.locationShort }}</p>
       <h1 class="hero-title">Zdrowe stopy są fundamentem <em>codziennego komfortu</em></h1>
       <p class="hero-lead">
-        {{ site.Params.tagline }} Profesjonalna podologia oparta na trafnej diagnozie, sterylności oraz spokojnym, indywidualnym podejściu do każdego pacjenta.
+        {{ site.Params.tagline }} Holistyczna podologia stóp i dłoni oparta na trafnej diagnozie, sterylności medycznej oraz spokojnym, partnerskim podejściu do każdego pacjenta.
       </p>
 
       <div class="hero-actions">
@@ -25,45 +25,33 @@
       <ul class="hero-credentials" aria-label="Atuty gabinetu">
         <li>
           <span class="cred-dot" aria-hidden="true"></span>
-          <span><strong>{{ site.Params.specialistName }}</strong> &mdash; Uniwersytet Medyczny w Poznaniu</span>
+          <span><strong>{{ site.Params.specialistName }}</strong> &mdash; mgr kosmetologii, spec. podologii (UM w Poznaniu)</span>
         </li>
         <li>
           <span class="cred-dot" aria-hidden="true"></span>
-          <span>Narzędzia jednorazowe i <strong>sterylizacja w autoklawie</strong></span>
+          <span>Sterylizacja narzędzi w <strong>autoklawie klasy B</strong> i materiały jednorazowe</span>
         </li>
         <li>
           <span class="cred-dot" aria-hidden="true"></span>
-          <span>Otwarte <strong>pon&ndash;pt do 20:00</strong> oraz w <strong>soboty 09:00&ndash;13:00</strong></span>
+          <span><strong>{{ $c.addressFull }}</strong> ({{ $c.studioNote }})</span>
         </li>
       </ul>
     </div>
 
     <div class="hero-visual">
-      <div class="hero-frame{{ if not $m.heroPortrait }} hero-frame--editorial{{ end }}">
+      <div class="hero-frame">
         {{- with $m.heroPortrait -}}
-          <img src="{{ . | relURL }}" alt="{{ site.Params.brandFull }}" class="hero-photo" loading="eager">
+          <div class="hero-photo-wrap">
+            <img src="{{ . | relURL }}" alt="{{ site.Params.brandFull }} — mgr Patrycja Zakrzewska-Dworczak" class="hero-photo" loading="eager">
+          </div>
         {{- else -}}
           <div class="hero-monogram-panel" aria-label="PZD Podologia — mgr Patrycja Zakrzewska-Dworczak">
-            <svg class="hero-emblem" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="90" cy="90" r="82" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>
-              <circle cx="90" cy="90" r="66" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 5"/>
-              <path d="M68 48C56 62 53 84 60 107C65 123 77 132 85 128C93 124 91 107 87 92C83 76 83 56 76 47C74 44 70 45 68 48Z" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
-              <path d="M112 48C124 62 127 84 120 107C115 123 103 132 95 128C87 124 89 107 93 92C97 76 97 56 104 47C106 44 110 45 112 48Z" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
-              <circle cx="62" cy="40" r="2.2" fill="currentColor" fill-opacity="0.45"/>
-              <circle cx="69" cy="36" r="1.8" fill="currentColor" fill-opacity="0.35"/>
-              <circle cx="76" cy="36" r="1.6" fill="currentColor" fill-opacity="0.3"/>
-              <circle cx="118" cy="40" r="2.2" fill="currentColor" fill-opacity="0.45"/>
-              <circle cx="111" cy="36" r="1.8" fill="currentColor" fill-opacity="0.35"/>
-              <circle cx="104" cy="36" r="1.6" fill="currentColor" fill-opacity="0.3"/>
-            </svg>
             <p class="hero-monogram-title">PZD PODOLOGIA</p>
             <p class="hero-monogram-sub">MGR PATRYCJA ZAKRZEWSKA-DWORCZAK</p>
-            <div class="hero-monogram-divider" aria-hidden="true"></div>
-            <p class="hero-monogram-meta">{{ $c.addressFull }}</p>
           </div>
         {{- end -}}
 
-        <div class="hero-floating-card">
+        <div class="hero-dock-card">
           <div class="floating-row">
             <span class="floating-label">Godziny przyjęć</span>
             <span class="floating-value">Pon&ndash;Pt 09:00&ndash;20:00 &bull; Sob 09:00&ndash;13:00</span>
@@ -80,42 +68,51 @@
 
 {{/* O GABINECIE */}}
 <section class="section section--surface" id="o-gabinecie">
-  <div class="container about-grid">
-    <div class="about-copy">
-      <p class="eyebrow">O gabinecie i specjaliście</p>
-      <h2 class="section-title">Trafna diagnoza zamiast doraźnego maskowania objawów</h2>
-      <p>
-        Gabinet <strong>PZD Podologia</strong> w Budziechowie koło Lubska prowadzi <strong>mgr Patrycja Zakrzewska-Dworczak</strong> &mdash; absolwentka <strong>Uniwersytetu Medycznego im. Karola Marcinkowskiego w Poznaniu</strong> (2022&ndash;2024).
-      </p>
-      <p>
-        W swojej pracy łączę wiedzę medyczną z empatią i spokojnym wyjaśnieniem każdego etapu terapii. Wielu pacjentów trafia do gabinetu po miesiącach nieskutecznych prób i przypadkowych preparatów &mdash; dlatego punktem wyjścia jest zawsze dokładny wywiad, rzetelne rozpoznanie przyczyny problemu oraz jasne wskazówki do pielęgnacji domowej.
-      </p>
+  <div class="container">
+    <div class="about-intro-grid">
+      {{- with $m.clinicInterior }}
+      <figure class="about-portrait">
+        <img src="{{ . | relURL }}" alt="mgr Patrycja Zakrzewska-Dworczak w gabinecie PZD Podologia" loading="lazy">
+        <figcaption>mgr Patrycja Zakrzewska-Dworczak &mdash; gabinet PZD Podologia, Budziechów 88</figcaption>
+      </figure>
+      {{- end }}
 
-      <div class="about-actions">
-        <a href="{{ "/o-gabinecie/" | relURL }}" class="btn btn-outline">Poznaj gabinet bliżej</a>
+      <div class="about-copy">
+        <p class="eyebrow">Poznajmy się</p>
+        <h2 class="section-title">Holistyczna podologia oparta na wiedzy medycznej</h2>
+        <p>
+          Nazywam się <strong>Patrycja Zakrzewska-Dworczak</strong> &mdash; jestem <strong>mgr kosmetologii i specjalistką podologii</strong>, absolwentką <strong>Uniwersytetu Medycznego im. Karola Marcinkowskiego w Poznaniu</strong>. Na co dzień przyjmuję pacjentów w Zielonej Górze oraz w gabinecie <strong>PZD Podologia</strong> w Budziechowie k. Lubska (w budynku studia fizjoterapii i treningu <em>Dobry Ruch</em>).
+        </p>
+        <p>
+          Podologia łączy w sobie anatomię, ortopedię, fizjoterapię i fizjologię. Na moim fotelu rozmawiamy nie tylko o tym, co widać na skórze lub paznokciu, ale też o przyczynach problemu &mdash; stawiając na komfort, bezpieczeństwo i jasny, realny plan terapii. Moją ulubioną specjalnością jest <strong>korekcja paznokci wrastających oraz pourazowych</strong>.
+        </p>
+
+        <div class="about-actions">
+          <a href="{{ "/o-gabinecie/" | relURL }}" class="btn btn-outline">Więcej o gabinecie i standardach</a>
+        </div>
       </div>
     </div>
 
-    <div class="pillars-grid">
+    <div class="pillars-grid pillars-grid--four">
       <article class="pillar-card">
         <span class="pillar-num">01</span>
         <h3>Wykształcenie medyczne</h3>
-        <p>Kwalifikacje zdobyte na Uniwersytecie Medycznym w Poznaniu przekładają się na odpowiedzialną diagnostykę i bezpieczne prowadzenie terapii.</p>
+        <p>Studia na Uniwersytecie Medycznym w Poznaniu oraz holistyczne łączenie podologii z wiedzą o anatomii i biomechanice stopy.</p>
       </article>
       <article class="pillar-card">
         <span class="pillar-num">02</span>
-        <h3>Sterylność na poziomie medycznym</h3>
-        <p>Jednorazowe materiały oraz narzędzia sterylizowane w autoklawie i otwierane ze sterylnego pakietu bezpośrednio przy pacjencie.</p>
+        <h3>Autoklaw klasy B</h3>
+        <p>Pełna procedura mycia, dezynfekcji i sterylizacji narzędzi wielorazowych w autoklawie medycznym klasy B oraz materiały jednorazowe.</p>
       </article>
       <article class="pillar-card">
         <span class="pillar-num">03</span>
-        <h3>Komfort i bezbolesność</h3>
-        <p>Delikatna praca dostosowana do wrażliwości stóp &mdash; tak, aby już po pierwszej wizycie poczuć realną ulgę w chodzeniu.</p>
+        <h3>Konkrety i komfort</h3>
+        <p>Delikatna praca bez bólu, miła atmosfera i jasne zalecenia domowe, dzięki którym efekty terapii są trwałe.</p>
       </article>
       <article class="pillar-card pillar-card--clinical">
         <span class="pillar-num">04</span>
-        <h3>Profilaktyka stopy cukrzycowej</h3>
-        <p>Szczególna uwaga dla pacjentów z cukrzycą oraz edukacja dla ich bliskich &mdash; regularna kontrola chroni przed groźnymi powikłaniami.</p>
+        <h3>Opieka nad stopą cukrzycową</h3>
+        <p>Bezpieczna profilaktyka dla diabetyków i wsparcie dla ich bliskich &mdash; regularna kontrola chroni przed groźnymi powikłaniami.</p>
       </article>
     </div>
   </div>
@@ -158,18 +155,18 @@
     <div class="steps-grid">
       <article class="step-card">
         <span class="step-index">Krok 01</span>
-        <h3>Wywiad i dokładna ocena stóp</h3>
-        <p>Omawiamy dolegliwości, stan zdrowia, choroby towarzyszące i dotychczasową pielęgnację. Przed zabiegiem przedstawiam plan działania oraz koszt.</p>
+        <h3>Wywiad i dokładna diagnoza</h3>
+        <p>Omawiamy dolegliwości, choroby współistniejące, obuwie i pielęgnację. Przed zabiegiem ustalamy przejrzysty plan terapii oraz jej koszt.</p>
       </article>
       <article class="step-card">
         <span class="step-index">Krok 02</span>
-        <h3>Bezbolesny zabieg w sterylnych warunkach</h3>
-        <p>Precyzyjne opracowanie problemu przy użyciu sterylnych narzędzi z autoklawu i bezpiecznych, sprawdzonych preparatów podologicznych.</p>
+        <h3>Bezbolesny, sterylny zabieg</h3>
+        <p>Precyzyjne opracowanie stóp lub paznokci dłoni sterylnymi narzędziami z autoklawu klasy B &mdash; z maksymalną dbałością o komfort.</p>
       </article>
       <article class="step-card">
         <span class="step-index">Krok 03</span>
         <h3>Zalecenia domowe i profilaktyka</h3>
-        <p>Otrzymujesz konkretne, proste wskazówki dotyczące codziennej pielęgnacji i obuwia, dzięki którym efekty terapii utrzymują się na stałe.</p>
+        <p>Konkretne wskazówki pielęgnacyjne i profilaktyczne, dzięki którym wspólnie utrzymujemy efekt zabiegu i zapobiegamy nawrotom.</p>
       </article>
     </div>
   </div>
@@ -180,7 +177,7 @@
   <div class="container">
     <div class="section-header section-header--split">
       <div>
-        <p class="eyebrow">Przejrzyste ceny</p>
+        <p class="eyebrow">Oficjalny cennik</p>
         <h2 class="section-title">Cennik zabiegów podologicznych</h2>
       </div>
       <a href="{{ "/cennik/" | relURL }}" class="text-link">Otwórz osobny cennik &rarr;</a>
@@ -196,8 +193,8 @@
     <div class="section-header section-header--split">
       <div>
         <p class="eyebrow">Praktyka gabinetowa</p>
-        <h2 class="section-title">Przykłady terapii i efektów</h2>
-        <p class="section-lead">Systematyczność, trafne rozpoznanie i współpraca w pielęgnacji domowej pozwalają rozwiązać nawet wieloletnie problemy stóp i paznokci.</p>
+        <h2 class="section-title">Rzeczywiste efekty terapii</h2>
+        <p class="section-lead">Trafna diagnoza, regularność i współpraca w pielęgnacji domowej pozwalają rozwiązać nawet wieloletnie problemy paznokci i skóry. Kliknij wybrane zdjęcie, aby je powiększyć.</p>
       </div>
       <a href="{{ $s.facebook }}" target="_blank" rel="noopener noreferrer" class="text-link">Więcej realizacji na Facebooku &rarr;</a>
     </div>
@@ -205,11 +202,13 @@
     <div class="cases-grid">
       {{- range hugo.Data.cases }}
       {{- $caseTitle := .title }}
+      {{- $fit := .fit | default "cover" }}
       <article class="case-card">
         {{- with .image }}
-        <div class="case-media">
+        <button type="button" class="case-media case-media--{{ $fit }}" data-lightbox-src="{{ . | relURL }}" data-lightbox-caption="{{ $caseTitle }}" aria-label="Powiększ zdjęcie: {{ $caseTitle }}">
           <img src="{{ . | relURL }}" alt="{{ $caseTitle }}" loading="lazy">
-        </div>
+          <span class="case-zoom-hint" aria-hidden="true">Powiększ</span>
+        </button>
         {{- end }}
         <div class="case-body">
           <div class="case-tags">

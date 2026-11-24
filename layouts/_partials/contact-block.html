@@ -5,7 +5,7 @@
     <span class="eyebrow">Rezerwacja wizyt</span>
     <h2 class="section-title">Umów się na wizytę</h2>
     <p class="contact-intro">
-      Rejestracja odbywa się telefonicznie, mailowo oraz przez wiadomości prywatne na Facebooku i Instagramie. Jeśli w trakcie zabiegu nie mogę odebrać telefonu — oddzwaniam najszybciej jak to możliwe.
+      Wizytę można umówić telefonicznie, mailowo oraz przez wiadomości na Facebooku i Instagramie. Na co dzień przyjmuję również pacjentów w Zielonej Górze &mdash; jeśli nie odbieram, oznacza to, że jestem w trakcie zabiegu i oddzwonię najszybciej jak to możliwe.
     </p>
 
     <div class="contact-items">
@@ -36,6 +36,7 @@
         <span>
           <span class="contact-item-label">Adres gabinetu</span>
           <strong class="contact-item-value">{{ $c.addressFull }}</strong>
+          <span class="contact-item-sub">{{ $c.studioNote }}</span>
         </span>
       </a>
     </div>
@@ -63,22 +64,22 @@
         {{- end }}
       </ul>
       <p class="hours-hint">
-        Wydłużone godziny w tygodniu (do 20:00) oraz sobotnie przedpołudnia ułatwiają dopasowanie wizyty po pracy.
+        Prosimy o punktualne przybycie (tolerancja spóźnienia 10 min) oraz informację o odwołaniu wizyty najpóźniej 24h przed terminem.
       </p>
     </div>
 
     <div class="location-panel">
       {{- with site.Params.media.clinicExterior }}
       <div class="location-photo">
-        <img src="{{ . | relURL }}" alt="Budynek gabinetu PZD Podologia — Budziechów 88" loading="lazy">
+        <img src="{{ . | relURL }}" alt="Wejście do gabinetu PZD Podologia — Budziechów 88 (Studio Dobry Ruch)" loading="lazy">
       </div>
       {{- end }}
       <div class="location-copy">
         <p class="location-address">
-          <strong>{{ $c.street }}</strong><br>
+          <strong>{{ $c.street }}</strong> &bull; Studio „Dobry Ruch”<br>
           {{ $c.postalCode }} {{ $c.city }}, {{ $c.region }}
         </p>
-        <p class="location-note">Dogodny dojazd z Lubska i okolic. Płatność na miejscu: {{ $c.payments }}.</p>
+        <p class="location-note">Dogodny dojazd z Lubska, Żar i okolic. Płatność na miejscu: {{ $c.payments }}.</p>
         <a href="{{ $c.mapsUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
           Wyznacz trasę w Mapach Google &rarr;
         </a>

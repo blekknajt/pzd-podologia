@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{- $m := site.Params.media -}}
+{{- $c := site.Params.contact -}}
 <section class="page-hero">
   <div class="container">
     {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
@@ -13,24 +14,28 @@
     <div class="prose">
       <h2>{{ site.Params.specialistName }}</h2>
       <p>
-        Jestem absolwentką <strong>Uniwersytetu Medycznego im. Karola Marcinkowskiego w Poznaniu</strong> (2022&ndash;2024). Gabinet <strong>PZD Podologia</strong> w Budziechowie koło Lubska stworzyłam z myślą o pacjentach, którzy oczekują profesjonalnej, rzetelnej i bezbolesnej pomocy w problemach stóp oraz paznokci.
+        Cześć! Mam na imię Patrycja, jestem <strong>mgr kosmetologii oraz specjalistką podologii</strong>. Ukończyłam <strong>Uniwersytet Medyczny im. Karola Marcinkowskiego w Poznaniu</strong> (2022&ndash;2024). Na co dzień przyjmuję pacjentów w Zielonej Górze oraz w gabinecie <strong>PZD Podologia</strong> w Budziechowie koło Lubska, w budynku studia fizjoterapii i treningu <em>Dobry Ruch</em>.
       </p>
       <p>
-        Wierzę, że kluczem do skutecznej terapii podologicznej jest <strong>trafna diagnoza</strong> oraz partnerska rozmowa z pacjentem. Podczas każdej wizyty dokładnie tłumaczę, skąd bierze się dany problem &mdash; czy są to nawracające odciski, bolesne pęknięcia pięt, wrastające paznokcie, czy przewlekłe zmiany w obrębie płytki paznokciowej &mdash; i jak wspólnie zadbać o trwałą poprawę.
+        Podologia zajmuje się dysfunkcjami aparatu paznokciowego <strong>stóp i dłoni</strong> oraz całego obszaru podeszwowego stóp. Łączy w sobie anatomię, ortopedię, fizjoterapię i fizjologię &mdash; umiejętne połączenie tych dziedzin daje trwałe efekty terapii. Na moim fotelu rozmawiamy nie tylko o tym, co widać na powierzchni, ale także o źródle problemu.
       </p>
+      <p>
+        W swojej pracy stawiam na komfort, bezpieczeństwo i miłą atmosferę, bazując jednocześnie na konkretach oraz jasnych, realnych celach, które wspólnie wyznaczamy. Moją ulubioną specjalnością jest <strong>korekcja paznokci wrastających oraz pourazowych</strong>.
+      </p>
+
       <h3>Standardy higieny i bezpieczeństwa</h3>
       <ul>
-        <li>Wykorzystanie certyfikowanych materiałów jednorazowych dla każdego pacjenta.</li>
-        <li>Pełny proces mycia, dezynfekcji oraz sterylizacji narzędzi w autoklawie medycznym.</li>
-        <li>Pakiety sterylne otwierane bezpośrednio przed zabiegiem.</li>
-        <li>Szczególna ostrożność i profilaktyka w pracy z pacjentami z grupy ryzyka, w tym osobami chorującymi na cukrzycę.</li>
+        <li>Pełna procedura mycia, dezynfekcji oraz sterylizacji narzędzi wielorazowych w <strong>autoklawie klasy B</strong>.</li>
+        <li>Wykorzystanie materiałów jednorazowych oraz otwieranie sterylnych pakietów bezpośrednio przed zabiegiem.</li>
+        <li>Rzetelny wywiad zdrowotny przed zabiegiem (cukrzyca, choroby krążenia, alergie, leki, ciąża).</li>
+        <li>Ochrona danych osobowych zgodnie z RODO oraz praca z poszanowaniem prywatności każdego pacjenta.</li>
       </ul>
     </div>
 
     <aside class="about-aside">
       {{- with $m.clinicInterior }}
       <figure class="about-photo-card">
-        <img src="{{ . | relURL }}" alt="Wnętrze gabinetu PZD Podologia w Budziechowie k. Lubska" loading="lazy">
+        <img src="{{ . | relURL }}" alt="mgr Patrycja Zakrzewska-Dworczak w gabinecie PZD Podologia" loading="lazy">
       </figure>
       {{- end }}
 
@@ -42,19 +47,23 @@
             <dd>{{ site.Params.specialistName }}</dd>
           </div>
           <div>
+            <dt>Tytuł i specjalizacja</dt>
+            <dd>mgr kosmetologii, spec. podologii</dd>
+          </div>
+          <div>
             <dt>Wykształcenie</dt>
             <dd>Uniwersytet Medyczny im. Karola Marcinkowskiego w Poznaniu (2022&ndash;2024)</dd>
           </div>
           <div>
             <dt>Lokalizacja</dt>
-            <dd>{{ site.Params.contact.addressFull }}</dd>
+            <dd>{{ $c.addressFull }}<br><span style="color:var(--ink-muted);font-weight:400;">{{ $c.studioNote }}</span></dd>
           </div>
           <div>
-            <dt>Płatności</dt>
-            <dd>{{ site.Params.contact.payments }}</dd>
+            <dt>Sterylizacja i płatności</dt>
+            <dd>Autoklaw klasy B &bull; {{ $c.payments }}</dd>
           </div>
         </dl>
-        <a href="tel:{{ site.Params.contact.phoneHref }}" class="btn btn-primary btn-block">Umów wizytę: {{ site.Params.contact.phoneDisplay }}</a>
+        <a href="tel:{{ $c.phoneHref }}" class="btn btn-primary btn-block">Umów wizytę: {{ $c.phoneDisplay }}</a>
       </div>
     </aside>
   </div>

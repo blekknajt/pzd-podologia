@@ -1,6 +1,6 @@
 # PZD Podologia — Strona internetowa (Hugo)
 
-Repozytorium strony internetowej dla gabinetu podologicznego **PZD Podologia — mgr Patrycja Zakrzewska-Dworczak** (Budziechów 88, 68-300 Lubsko).
+Repozytorium strony internetowej dla gabinetu podologicznego **PZD Podologia — mgr Patrycja Zakrzewska-Dworczak** (Budziechów 88, 68-300 Lubsko, w budynku studia fizjoterapii i treningu *Dobry Ruch*).
 
 ## Uruchomienie lokalne
 
@@ -11,31 +11,27 @@ Wymagany jest [Hugo](https://gohugo.io/) (projekt przetestowany z Hugo `v0.170.1
 hugo server -D
 
 # Budowa produkcyjna do katalogu public/
-hugo --minify
+hugo --minify --cleanDestinationDir
 ```
 
 ## Struktura projektu
 
 - `hugo.toml` — konfiguracja witryny, menu, dane kontaktowe, linki social media i ścieżki do mediów
-- `data/services.yaml` — lista zabiegów podologicznych (używana na stronie głównej i `/zabiegi/`)
-- `data/pricing.yaml` — pogrupowany cennik usług (używany na stronie głównej i `/cennik/`)
-- `data/cases.yaml` — przypadki kliniczne / efekty terapii (`#efekty`)
+- `data/services.yaml` — zakres zabiegów podologicznych (strona główna + `/zabiegi/`)
+- `data/pricing.yaml` — oficjalny cennik usług zgodny z grafiką gabinetu (strona główna + `/cennik/`)
+- `data/cases.yaml` — rzeczywiste efekty terapii ze zdjęciami przed/po (`#efekty`)
 - `data/faq.yaml` — najczęstsze pytania przed wizytą (`#faq`)
-- `data/hours.yaml` — godziny otwarcia gabinetu
+- `data/hours.yaml` — godziny przyjęć gabinetu
 - `content/` — podstrony (`zabiegi.md`, `cennik.md`, `o-gabinecie.md`, `kontakt.md`, `regulamin.md`, `polityka-prywatnosci.md`)
 - `layouts/` — dedykowany szablon Hugo (`baseof.html`, `home.html`, `_partials/`)
-- `assets/css/main.css` oraz `assets/js/main.js` — style i lekki skrypt nawigacji (minifikowane przez Hugo Pipes)
-- `static/images/` — docelowy katalog na zdjęcia i grafiki z Dysku Google
+- `assets/css/main.css` oraz `assets/js/main.js` — style, nawigacja mobilna i lekki podgląd (lightbox) zdjęć terapii
+- `static/images/` — zdjęcia i materiały pobrane z folderu Google Drive (`patrycja-hero.jpg`, `patrycja-gabinet.jpg`, `gabinet-budynek.jpg` oraz `efekty/*.jpg`)
 
-## Integracja materiałów z Dysku Google
+## Zintegrowane materiały
 
-Po pobraniu materiałów z folderu Google Drive wystarczy umieścić zoptymalizowane pliki w `static/images/` i uzupełnić ścieżki:
-
-1. **Logo i zdjęcia gabinetu** w `hugo.toml` (`[params.media]`):
-   - `logo` → np. `"/images/logo-pzd.svg"` (zastąpi wektorowy monogram nagłówka i stopki)
-   - `heroPortrait` → np. `"/images/patrycja-portret.jpg"` (wskoczy w ramkę hero na stronie głównej)
-   - `clinicInterior` → np. `"/images/gabinet-wnetrze.jpg"` (podstrona *O gabinecie*)
-   - `clinicExterior` → np. `"/images/gabinet-budynek.jpg"` (sekcja *Kontakt i dojazd*)
-   - `ogImage` → np. `"/images/og-pzd-podologia.jpg"` (podgląd linku na Facebooku / komunikatorach)
-2. **Zdjęcia efektów terapii (przed/po)** w `data/cases.yaml` (pole `image` dla każdego przypadku).
-3. **Weryfikacja pełnego cennika i regulaminu** w `data/pricing.yaml` oraz `content/regulamin.md`.
+Projekt zawiera pełny komplet materiałów z Dysku Google i oficjalnego profilu Facebook PZD Podologia:
+- oficjalny portret z logo marki (`static/images/patrycja-hero.jpg`) w sekcji hero i jako obrazek Open Graph,
+- zdjęcie gabinetu i specjalistki (`static/images/patrycja-gabinet.jpg`) w sekcji *Poznajmy się* oraz na podstronie `/o-gabinecie/`,
+- zdjęcie budynku *Dobry Ruch / Budziechów 88* (`static/images/gabinet-budynek.jpg`) w sekcji *Kontakt i dojazd*,
+- 6 udokumentowanych przypadków terapii przed/po w sekcji *Rzeczywiste efekty terapii* (z podglądem pełnoekranowym),
+- oficjalny cennik oraz pełny regulamin gabinetu (§ 1 – § 5).

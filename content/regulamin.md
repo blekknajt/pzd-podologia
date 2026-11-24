@@ -1,33 +1,35 @@
 ---
 title: "Regulamin gabinetu"
-description: "Zasady rezerwacji, odwoływania wizyt, płatności oraz standardy higieny w Gabinecie Podologicznym PZD Podologia."
+description: "Oficjalny regulamin Gabinetu Podologicznego Patrycja Zakrzewska-Dworczak - Podologia (Budziechów 88, 68-300 Lubsko)."
 eyebrow: "Zasady współpracy"
-lead: "Poniższe zasady pozwalają nam zadbać o punktualność, komfort oraz najwyższe standardy higieny dla każdego pacjenta."
+lead: "Poniższy regulamin określa zasady korzystania z usług Gabinetu Podologicznego PZD Podologia oraz prawa i obowiązki pacjentów i personelu."
 ---
 
-## 1. Postanowienia ogólne
+## § 1. Postanowienia ogólne
 
-Niniejszy regulamin określa zasady korzystania z usług świadczonych w **Gabinecie Podologicznym PZD Podologia — Patrycja Zakrzewska-Dworczak**, zlokalizowanym pod adresem **Budziechów 88, 68-300 Lubsko**.
+1. Regulamin określa zasady korzystania z usług **Gabinetu Podologicznego Patrycja Zakrzewska-Dworczak – Podologia**, Budziechów 88, 68-300 Lubsko oraz prawa i obowiązki pacjentów i personelu.
+2. Korzystanie z usług gabinetu jest równoznaczne z akceptacją niniejszego regulaminu.
 
-Skorzystanie z usług gabinetu jest równoznaczne z akceptacją postanowień regulaminu.
+## § 2. Rezerwacja i odwoływanie wizyt
 
-## 2. Rezerwacja i odwoływanie wizyt
+1. Wizyty umawiane są telefonicznie (`+48 663 352 327`) lub poprzez social media (Facebook).
+2. W celu zapewnienia sprawnej organizacji, pacjent zobowiązany jest do przybycia na wizytę punktualnie. **Dopuszcza się 10 minut spóźnienia.**
+3. Odwołanie lub zmiana terminu wizyty powinna nastąpić najpóźniej na **24 godziny** przed planowanym zabiegiem.
+4. W przypadku notorycznego niestawiania się na umówione wizyty bez wcześniejszego powiadomienia, gabinet ma prawo odmówić realizacji kolejnych usług.
 
-- Wizyty można umawiać telefonicznie pod numerem **+48 663 352 327**, mailowo (`pzd.podologia@gmail.com`) lub poprzez wiadomości prywatne na oficjalnych profilach **Facebook** oraz **Instagram** (`@pzd.podologia`).
-- Prosimy o odwoływanie lub przekładanie umówionych wizyt najpóźniej na **24 godziny przed planowanym terminem**. Pozwala to udostępnić zwolniony termin innemu pacjentowi potrzebującemu pilnej pomocy.
-- Dopuszczalne spóźnienie wynosi **15 minut**. W przypadku większego opóźnienia gabinet zastrzega sobie prawo do skrócenia zakresu zabiegu lub przełożenia wizyty na inny termin, aby nie opóźniać kolejnych pacjentów.
+## § 3. Prawa i obowiązki pacjenta
 
-## 3. Higiena i bezpieczeństwo zabiegów
+1. Pacjent ma prawo do świadczenia usług przez wykwalifikowany personel, z zachowaniem najwyższych standardów higieny oraz ochrony danych osobowych (RODO).
+2. Pacjent zobowiązany jest poinformować podologa o swoim aktualnym stanie zdrowia, w tym w szczególności o **cukrzycy, chorobach krążenia, alergiach, przyjmowanych lekach oraz ciąży**.
+3. W przypadku podejrzenia zmian o charakterze zakaźnym, podolog może odmówić wykonania zabiegu do czasu konsultacji lekarskiej i wdrożenia leczenia.
 
-- Wszystkie zabiegi wykonywane są przy użyciu **materiałów jednorazowych** oraz narzędzi wielokrotnego użytku poddanych pełnemu procesowi dezynfekcji i **sterylizacji w autoklawie medycznym**.
-- Sterylne pakiety narzędziowe otwierane są bezpośrednio przed zabiegiem w obecności pacjenta.
-- Przed pierwszą wizytą przeprowadzany jest wywiad podologiczny. Prosimy o rzetelne informowanie o chorobach przewlekłych (m.in. cukrzycy, zaburzeniach krążenia, alergiach) oraz przyjmowanych lekach.
+## § 4. Bezpieczeństwo i higiena
 
-## 4. Płatności
+1. Gabinet spełnia wszelkie wymogi sanitarne. Narzędzia wielorazowe podlegają procedurze mycia, dezynfekcji i sterylizacji w **autoklawie klasy B**.
+2. Na terenie gabinetu obowiązuje bezwzględny zakaz palenia tytoniu, e-papierosów oraz spożywania alkoholu.
+3. Zabiegi u osób niepełnoletnich wykonywane są wyłącznie za zgodą i w obecności rodzica lub opiekuna prawnego.
 
-- Płatność za zabiegi dokonywana jest bezpośrednio po wizycie — **gotówką lub za pomocą systemu BLIK**.
-- Aktualne ceny orientacyjne dostępne są w zakładce [Cennik](/cennik/). Ostateczny koszt zabiegu zależy od zakresu terapii i jest zawsze omawiany przed rozpoczęciem procedury.
+## § 5. Płatności i reklamacje
 
----
-
-> *Uwaga techniczna (do aktualizacji po wgraniu materiałów z Dysku Google): Treść regulaminu została opracowana na podstawie kluczowych zasad udostępnionych na profilu Facebook gabinetu. Po otrzymaniu pełnego pliku regulaminu w wysokiej rozdzielczości uzupełnimy dokument o ewentualne dodatkowe punkty.*
+1. Płatności za usługi można dokonać **gotówką lub BLIKiem** (zgodnie z informacją w recepcji). Aktualny [cennik usług](/cennik/) jest dostępny w lokalu oraz na stronie internetowej.
+2. Ewentualne reklamacje dotyczące wykonanej usługi należy zgłaszać mailowo (`pzd.podologia@gmail.com`) lub telefonicznie niezwłocznie po zauważeniu nieprawidłowości. Reklamacja obejmuje **7 dni** od wykonania zabiegu, ale nie obejmuje powikłań wynikających z zatajenia informacji o stanie zdrowia lub nieprzestrzegania zaleceń pozabiegowych.

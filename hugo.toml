@@ -14,7 +14,7 @@ disableKinds = ["taxonomy", "term"]
 [menus]
   [[menus.main]]
     name = "O gabinecie"
-    url = "/#o-gabinecie"
+    url = "/o-gabinecie/"
     weight = 10
   [[menus.main]]
     name = "Zabiegi"
@@ -41,13 +41,14 @@ disableKinds = ["taxonomy", "term"]
   brandShort = "PZD Podologia"
   brandFull = "PZD Podologia — mgr Patrycja Zakrzewska-Dworczak"
   specialistName = "mgr Patrycja Zakrzewska-Dworczak"
-  specialistTitle = "Podolog • Absolwentka Uniwersytetu Medycznego w Poznaniu"
+  specialistTitle = "mgr kosmetologii, spec. podologii • Uniwersytet Medyczny w Poznaniu"
   tagline = "Tworzę miejsce, gdzie zdrowe stopy są fundamentem prawidłowego i komfortowego funkcjonowania."
-  description = "Gabinet podologiczny PZD Podologia mgr Patrycji Zakrzewskiej-Dworczak w Budziechowie k. Lubska. Profesjonalna diagnostyka i bezbolesne zabiegi podologiczne: pedicure podologiczny, wrastające paznokcie, klamra tytanowa, pękające pięty, odciski, modzele, stopa cukrzycowa."
+  description = "Gabinet podologiczny PZD Podologia mgr Patrycji Zakrzewskiej-Dworczak w Budziechowie k. Lubska (studio Dobry Ruch). Pedicure podologiczny, wrastające paznokcie, klamra tytanowa, pękające pięty, odciski, modzele, rekonstrukcja płytki i profilaktyka stopy cukrzycowej."
   locationShort = "Budziechów k. Lubska"
 
   [params.contact]
     street = "Budziechów 88"
+    studioNote = "w budynku studia fizjoterapii i treningu „Dobry Ruch”"
     postalCode = "68-300"
     city = "Lubsko"
     region = "woj. lubuskie"
@@ -65,11 +66,9 @@ disableKinds = ["taxonomy", "term"]
     instagram = "https://www.instagram.com/pzd.podologia/"
     instagramHandle = "@pzd.podologia"
 
-  # Po otrzymaniu materiałów z Dysku Google wystarczy wrzucić pliki do static/images/
-  # i odkomentować lub uzupełnić poniższe ścieżki — układ automatycznie przełączy się na zdjęcia.
   [params.media]
-    logo = ""                # np. "/images/logo-pzd.svg" lub "/images/logo-pzd.png"
-    heroPortrait = ""        # np. "/images/patrycja-portret.jpg"
-    clinicInterior = ""      # np. "/images/gabinet-wnetrze.jpg"
-    clinicExterior = ""      # np. "/images/gabinet-budynek.jpg"
-    ogImage = ""             # np. "/images/og-pzd-podologia.jpg"
+    logo = ""
+    heroPortrait = "/images/patrycja-hero.jpg"
+    clinicInterior = "/images/patrycja-gabinet.jpg"
+    clinicExterior = "/images/gabinet-budynek.jpg"
+    ogImage = "/images/patrycja-hero.jpg"
