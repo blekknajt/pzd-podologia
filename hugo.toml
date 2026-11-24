@@ -1,0 +1,75 @@
+baseURL = "https://pzdpodologia.pl/"
+locale = "pl-PL"
+defaultContentLanguage = "pl"
+title = "PZD Podologia — mgr Patrycja Zakrzewska-Dworczak | Gabinet Podologiczny Lubsko"
+enableRobotsTXT = true
+enableGitInfo = false
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menus]
+  [[menus.main]]
+    name = "O gabinecie"
+    url = "/#o-gabinecie"
+    weight = 10
+  [[menus.main]]
+    name = "Zabiegi"
+    url = "/zabiegi/"
+    weight = 20
+  [[menus.main]]
+    name = "Cennik"
+    url = "/cennik/"
+    weight = 30
+  [[menus.main]]
+    name = "Efekty terapii"
+    url = "/#efekty"
+    weight = 40
+  [[menus.main]]
+    name = "FAQ"
+    url = "/#faq"
+    weight = 50
+  [[menus.main]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 60
+
+[params]
+  brandShort = "PZD Podologia"
+  brandFull = "PZD Podologia — mgr Patrycja Zakrzewska-Dworczak"
+  specialistName = "mgr Patrycja Zakrzewska-Dworczak"
+  specialistTitle = "Podolog • Absolwentka Uniwersytetu Medycznego w Poznaniu"
+  tagline = "Tworzę miejsce, gdzie zdrowe stopy są fundamentem prawidłowego i komfortowego funkcjonowania."
+  description = "Gabinet podologiczny PZD Podologia mgr Patrycji Zakrzewskiej-Dworczak w Budziechowie k. Lubska. Profesjonalna diagnostyka i bezbolesne zabiegi podologiczne: pedicure podologiczny, wrastające paznokcie, klamra tytanowa, pękające pięty, odciski, modzele, stopa cukrzycowa."
+  locationShort = "Budziechów k. Lubska"
+
+  [params.contact]
+    street = "Budziechów 88"
+    postalCode = "68-300"
+    city = "Lubsko"
+    region = "woj. lubuskie"
+    country = "Polska"
+    addressFull = "Budziechów 88, 68-300 Lubsko"
+    phoneDisplay = "+48 663 352 327"
+    phoneHref = "+48663352327"
+    email = "pzd.podologia@gmail.com"
+    mapsUrl = "https://www.google.com/maps/search/?api=1&query=Budziech%C3%B3w+88%2C+68-300+Lubsko"
+    payments = "Gotówka oraz BLIK"
+
+  [params.social]
+    facebook = "https://www.facebook.com/profile.php?id=61588723551257"
+    facebookHandle = "PZD Podologia"
+    instagram = "https://www.instagram.com/pzd.podologia/"
+    instagramHandle = "@pzd.podologia"
+
+  # Po otrzymaniu materiałów z Dysku Google wystarczy wrzucić pliki do static/images/
+  # i odkomentować lub uzupełnić poniższe ścieżki — układ automatycznie przełączy się na zdjęcia.
+  [params.media]
+    logo = ""                # np. "/images/logo-pzd.svg" lub "/images/logo-pzd.png"
+    heroPortrait = ""        # np. "/images/patrycja-portret.jpg"
+    clinicInterior = ""      # np. "/images/gabinet-wnetrze.jpg"
+    clinicExterior = ""      # np. "/images/gabinet-budynek.jpg"
+    ogImage = ""             # np. "/images/og-pzd-podologia.jpg"

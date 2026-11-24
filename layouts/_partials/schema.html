@@ -1,0 +1,40 @@
+{{- $c := site.Params.contact -}}
+{{- $s := site.Params.social -}}
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" (slice "MedicalClinic" "LocalBusiness")
+  "name" site.Params.brandFull
+  "alternateName" site.Params.brandShort
+  "description" site.Params.description
+  "url" site.BaseURL
+  "telephone" $c.phoneHref
+  "email" $c.email
+  "priceRange" "$$"
+  "medicalSpecialty" "Podiatric"
+  "paymentAccepted" "Cash, BLIK"
+  "currenciesAccepted" "PLN"
+  "address" (dict
+    "@type" "PostalAddress"
+    "streetAddress" $c.street
+    "postalCode" $c.postalCode
+    "addressLocality" $c.city
+    "addressRegion" $c.region
+    "addressCountry" "PL"
+  )
+  "openingHoursSpecification" (slice
+    (dict
+      "@type" "OpeningHoursSpecification"
+      "dayOfWeek" (slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday")
+      "opens" "09:00"
+      "closes" "20:00"
+    )
+    (dict
+      "@type" "OpeningHoursSpecification"
+      "dayOfWeek" (slice "Saturday")
+      "opens" "09:00"
+      "closes" "13:00"
+    )
+  )
+  "sameAs" (slice $s.facebook $s.instagram)
+-}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>

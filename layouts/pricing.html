@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    {{ partial "pricing-table.html" . }}
+
+    <div class="cta-banner">
+      <div>
+        <h2>Gotowy, aby umówić wizytę?</h2>
+        <p>Przyjmujemy od poniedziałku do piątku w godzinach 09:00&ndash;20:00 oraz w soboty 09:00&ndash;13:00.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="tel:{{ site.Params.contact.phoneHref }}" class="btn btn-primary">Zadzwoń: {{ site.Params.contact.phoneDisplay }}</a>
+        <a href="{{ "/kontakt/" | relURL }}" class="btn btn-secondary">Kontakt i dojazd</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

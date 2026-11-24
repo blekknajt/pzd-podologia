@@ -1,0 +1,46 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="services-detailed-list">
+      {{- range hugo.Data.services }}
+      <article class="service-detailed-card" id="{{ .id }}">
+        <div class="service-detailed-head">
+          <div>
+            <span class="service-category">{{ .category }}</span>
+            <h2>{{ .title }}</h2>
+          </div>
+          <span class="service-price-lg">{{ .price }}</span>
+        </div>
+        <p class="service-detailed-summary">{{ .summary }}</p>
+        {{- with .details }}
+        <ul class="check-list">
+          {{- range . }}
+          <li>{{ . }}</li>
+          {{- end }}
+        </ul>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h2>Nie masz pewności, który zabieg wybrać?</h2>
+        <p>Umów się na konsultację podologiczną (80 zł) lub zadzwoń &mdash; wspólnie dobierzemy najlepszy i najbezpieczniejszy plan terapii.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="tel:{{ site.Params.contact.phoneHref }}" class="btn btn-primary">Zadzwoń: {{ site.Params.contact.phoneDisplay }}</a>
+        <a href="{{ "/cennik/" | relURL }}" class="btn btn-secondary">Pełny cennik</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

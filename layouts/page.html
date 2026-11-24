@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container container--narrow">
+    {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow prose">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

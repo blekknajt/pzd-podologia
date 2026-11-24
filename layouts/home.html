@@ -1,0 +1,258 @@
+{{ define "main" }}
+{{- $c := site.Params.contact -}}
+{{- $s := site.Params.social -}}
+{{- $m := site.Params.media -}}
+
+{{/* HERO */}}
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Gabinet Podologiczny &bull; {{ site.Params.locationShort }}</p>
+      <h1 class="hero-title">Zdrowe stopy są fundamentem <em>codziennego komfortu</em></h1>
+      <p class="hero-lead">
+        {{ site.Params.tagline }} Profesjonalna podologia oparta na trafnej diagnozie, sterylności oraz spokojnym, indywidualnym podejściu do każdego pacjenta.
+      </p>
+
+      <div class="hero-actions">
+        <a href="tel:{{ $c.phoneHref }}" class="btn btn-primary btn-lg">
+          Zadzwoń: {{ $c.phoneDisplay }}
+        </a>
+        <a href="#cennik" class="btn btn-secondary btn-lg">
+          Zobacz zabiegi i cennik
+        </a>
+      </div>
+
+      <ul class="hero-credentials" aria-label="Atuty gabinetu">
+        <li>
+          <span class="cred-dot" aria-hidden="true"></span>
+          <span><strong>{{ site.Params.specialistName }}</strong> &mdash; Uniwersytet Medyczny w Poznaniu</span>
+        </li>
+        <li>
+          <span class="cred-dot" aria-hidden="true"></span>
+          <span>Narzędzia jednorazowe i <strong>sterylizacja w autoklawie</strong></span>
+        </li>
+        <li>
+          <span class="cred-dot" aria-hidden="true"></span>
+          <span>Otwarte <strong>pon&ndash;pt do 20:00</strong> oraz w <strong>soboty 09:00&ndash;13:00</strong></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-frame{{ if not $m.heroPortrait }} hero-frame--editorial{{ end }}">
+        {{- with $m.heroPortrait -}}
+          <img src="{{ . | relURL }}" alt="{{ site.Params.brandFull }}" class="hero-photo" loading="eager">
+        {{- else -}}
+          <div class="hero-monogram-panel" aria-label="PZD Podologia — mgr Patrycja Zakrzewska-Dworczak">
+            <svg class="hero-emblem" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="90" cy="90" r="82" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>
+              <circle cx="90" cy="90" r="66" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 5"/>
+              <path d="M68 48C56 62 53 84 60 107C65 123 77 132 85 128C93 124 91 107 87 92C83 76 83 56 76 47C74 44 70 45 68 48Z" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+              <path d="M112 48C124 62 127 84 120 107C115 123 103 132 95 128C87 124 89 107 93 92C97 76 97 56 104 47C106 44 110 45 112 48Z" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+              <circle cx="62" cy="40" r="2.2" fill="currentColor" fill-opacity="0.45"/>
+              <circle cx="69" cy="36" r="1.8" fill="currentColor" fill-opacity="0.35"/>
+              <circle cx="76" cy="36" r="1.6" fill="currentColor" fill-opacity="0.3"/>
+              <circle cx="118" cy="40" r="2.2" fill="currentColor" fill-opacity="0.45"/>
+              <circle cx="111" cy="36" r="1.8" fill="currentColor" fill-opacity="0.35"/>
+              <circle cx="104" cy="36" r="1.6" fill="currentColor" fill-opacity="0.3"/>
+            </svg>
+            <p class="hero-monogram-title">PZD PODOLOGIA</p>
+            <p class="hero-monogram-sub">MGR PATRYCJA ZAKRZEWSKA-DWORCZAK</p>
+            <div class="hero-monogram-divider" aria-hidden="true"></div>
+            <p class="hero-monogram-meta">{{ $c.addressFull }}</p>
+          </div>
+        {{- end -}}
+
+        <div class="hero-floating-card">
+          <div class="floating-row">
+            <span class="floating-label">Godziny przyjęć</span>
+            <span class="floating-value">Pon&ndash;Pt 09:00&ndash;20:00 &bull; Sob 09:00&ndash;13:00</span>
+          </div>
+          <div class="floating-row">
+            <span class="floating-label">Płatność</span>
+            <span class="floating-value">{{ $c.payments }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* O GABINECIE */}}
+<section class="section section--surface" id="o-gabinecie">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <p class="eyebrow">O gabinecie i specjaliście</p>
+      <h2 class="section-title">Trafna diagnoza zamiast doraźnego maskowania objawów</h2>
+      <p>
+        Gabinet <strong>PZD Podologia</strong> w Budziechowie koło Lubska prowadzi <strong>mgr Patrycja Zakrzewska-Dworczak</strong> &mdash; absolwentka <strong>Uniwersytetu Medycznego im. Karola Marcinkowskiego w Poznaniu</strong> (2022&ndash;2024).
+      </p>
+      <p>
+        W swojej pracy łączę wiedzę medyczną z empatią i spokojnym wyjaśnieniem każdego etapu terapii. Wielu pacjentów trafia do gabinetu po miesiącach nieskutecznych prób i przypadkowych preparatów &mdash; dlatego punktem wyjścia jest zawsze dokładny wywiad, rzetelne rozpoznanie przyczyny problemu oraz jasne wskazówki do pielęgnacji domowej.
+      </p>
+
+      <div class="about-actions">
+        <a href="{{ "/o-gabinecie/" | relURL }}" class="btn btn-outline">Poznaj gabinet bliżej</a>
+      </div>
+    </div>
+
+    <div class="pillars-grid">
+      <article class="pillar-card">
+        <span class="pillar-num">01</span>
+        <h3>Wykształcenie medyczne</h3>
+        <p>Kwalifikacje zdobyte na Uniwersytecie Medycznym w Poznaniu przekładają się na odpowiedzialną diagnostykę i bezpieczne prowadzenie terapii.</p>
+      </article>
+      <article class="pillar-card">
+        <span class="pillar-num">02</span>
+        <h3>Sterylność na poziomie medycznym</h3>
+        <p>Jednorazowe materiały oraz narzędzia sterylizowane w autoklawie i otwierane ze sterylnego pakietu bezpośrednio przy pacjencie.</p>
+      </article>
+      <article class="pillar-card">
+        <span class="pillar-num">03</span>
+        <h3>Komfort i bezbolesność</h3>
+        <p>Delikatna praca dostosowana do wrażliwości stóp &mdash; tak, aby już po pierwszej wizycie poczuć realną ulgę w chodzeniu.</p>
+      </article>
+      <article class="pillar-card pillar-card--clinical">
+        <span class="pillar-num">04</span>
+        <h3>Profilaktyka stopy cukrzycowej</h3>
+        <p>Szczególna uwaga dla pacjentów z cukrzycą oraz edukacja dla ich bliskich &mdash; regularna kontrola chroni przed groźnymi powikłaniami.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+{{/* ZABIEGI */}}
+<section class="section" id="zabiegi">
+  <div class="container">
+    <div class="section-header section-header--split">
+      <div>
+        <p class="eyebrow">Zakres usług</p>
+        <h2 class="section-title">W czym mogę Ci pomóc</h2>
+      </div>
+      <a href="{{ "/zabiegi/" | relURL }}" class="text-link">Zobacz szczegółowy opis zabiegów &rarr;</a>
+    </div>
+
+    <div class="services-grid">
+      {{- range hugo.Data.services }}
+      <article class="service-card">
+        <div class="service-meta">
+          <span class="service-category">{{ .category }}</span>
+          <span class="service-price">{{ .price }}</span>
+        </div>
+        <h3 class="service-title">{{ .title }}</h3>
+        <p class="service-summary">{{ .summary }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* JAK WYGLĄDA WIZYTA */}}
+<section class="section section--tinted">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Przebieg wizyty</p>
+      <h2 class="section-title">Spokojna i przejrzysta ścieżka terapii</h2>
+    </div>
+
+    <div class="steps-grid">
+      <article class="step-card">
+        <span class="step-index">Krok 01</span>
+        <h3>Wywiad i dokładna ocena stóp</h3>
+        <p>Omawiamy dolegliwości, stan zdrowia, choroby towarzyszące i dotychczasową pielęgnację. Przed zabiegiem przedstawiam plan działania oraz koszt.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-index">Krok 02</span>
+        <h3>Bezbolesny zabieg w sterylnych warunkach</h3>
+        <p>Precyzyjne opracowanie problemu przy użyciu sterylnych narzędzi z autoklawu i bezpiecznych, sprawdzonych preparatów podologicznych.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-index">Krok 03</span>
+        <h3>Zalecenia domowe i profilaktyka</h3>
+        <p>Otrzymujesz konkretne, proste wskazówki dotyczące codziennej pielęgnacji i obuwia, dzięki którym efekty terapii utrzymują się na stałe.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+{{/* CENNIK */}}
+<section class="section section--surface" id="cennik">
+  <div class="container">
+    <div class="section-header section-header--split">
+      <div>
+        <p class="eyebrow">Przejrzyste ceny</p>
+        <h2 class="section-title">Cennik zabiegów podologicznych</h2>
+      </div>
+      <a href="{{ "/cennik/" | relURL }}" class="text-link">Otwórz osobny cennik &rarr;</a>
+    </div>
+
+    {{ partial "pricing-table.html" . }}
+  </div>
+</section>
+
+{{/* EFEKTY TERAPII / PRZYPADKI KLINICZNE */}}
+<section class="section" id="efekty">
+  <div class="container">
+    <div class="section-header section-header--split">
+      <div>
+        <p class="eyebrow">Praktyka gabinetowa</p>
+        <h2 class="section-title">Przykłady terapii i efektów</h2>
+        <p class="section-lead">Systematyczność, trafne rozpoznanie i współpraca w pielęgnacji domowej pozwalają rozwiązać nawet wieloletnie problemy stóp i paznokci.</p>
+      </div>
+      <a href="{{ $s.facebook }}" target="_blank" rel="noopener noreferrer" class="text-link">Więcej realizacji na Facebooku &rarr;</a>
+    </div>
+
+    <div class="cases-grid">
+      {{- range hugo.Data.cases }}
+      {{- $caseTitle := .title }}
+      <article class="case-card">
+        {{- with .image }}
+        <div class="case-media">
+          <img src="{{ . | relURL }}" alt="{{ $caseTitle }}" loading="lazy">
+        </div>
+        {{- end }}
+        <div class="case-body">
+          <div class="case-tags">
+            <span class="pill pill--soft">{{ .tag }}</span>
+            <span class="case-duration">{{ .duration }}</span>
+          </div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .summary }}</p>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* FAQ */}}
+<section class="section section--tinted" id="faq">
+  <div class="container container--narrow">
+    <div class="section-header section-header--center">
+      <p class="eyebrow">Warto wiedzieć przed wizytą</p>
+      <h2 class="section-title">Najczęściej zadawane pytania</h2>
+    </div>
+
+    <div class="faq-list">
+      {{- range $idx, $item := hugo.Data.faq }}
+      <details class="faq-item"{{ if eq $idx 0 }} open{{ end }}>
+        <summary class="faq-question">
+          <span>{{ $item.question }}</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>{{ $item.answer }}</p>
+        </div>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* KONTAKT */}}
+<section class="section section--surface" id="kontakt">
+  <div class="container">
+    {{ partial "contact-block.html" . }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,17 @@
+# Hugo build outputs
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary / raw downloaded source media (keep curated web-ready assets in static/images or assets/images)
+/raw-materials/
+*.tmp

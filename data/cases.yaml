@@ -1,0 +1,25 @@
+# Przypadki kliniczne inspirowane rzeczywistymi wpisami edukacyjnymi gabinetu PZD Podologia.
+# Po wgraniu zdjęć z Dysku Google do static/images/efekty/ wystarczy uzupełnić pole `image`.
+- title: "Onychogryfoza — siła trafnej diagnozy"
+  duration: "3 miesiące terapii"
+  tag: "Terapia paznokci"
+  summary: "Młody pacjent po wcześniejszych, nieskutecznych wizytach i stosowaniu przypadkowych maści. Właściwa diagnoza, regularne opracowanie płytki i współpraca domowa przyniosły wyraźną poprawę w ciągu trzech miesięcy."
+  image: "" # np. "/images/efekty/onychogryfoza.jpg"
+
+- title: "Pękające pięty — ulga od pierwszej wizyty"
+  duration: "Natychmiastowa poprawa komfortu"
+  tag: "Terapia skóry"
+  summary: "Dokładne i bezbolesne opracowanie rozpadlin piętowych połączone z rozpoznaniem przyczyny problemu (przeciążenia, suchość skóry, czynniki ogólnoustrojowe) oraz doborem pielęgnacji regenerującej."
+  image: "" # np. "/images/efekty/pekajace-piety.jpg"
+
+- title: "Terapia grzybicy paznokci i onycholizy"
+  duration: "Terapia wieloetapowa"
+  tag: "Terapia paznokci"
+  summary: "Staranne mechaniczne oczyszczenie zgrubiałej, odwarstwionej płytki, wdrożenie celowanego preparatu przeciwgrzybiczego oraz profilaktyki wspierającej zdrowy odrost paznokcia."
+  image: "" # np. "/images/efekty/grzybica-onycholiza.jpg"
+
+- title: "Skuteczne usunięcie odcisku"
+  duration: "ok. 2 miesiące (wizyty co 3–4 tyg.)"
+  tag: "Terapia skóry"
+  summary: "Regularne, delikatne opracowanie w gabinecie w połączeniu z konsekwentną pielęgnacją domową i odciążeniem miejsca ucisku pozwala trwale pozbyć się bolesnego odcisku."
+  image: "" # np. "/images/efekty/odcisk.jpg"

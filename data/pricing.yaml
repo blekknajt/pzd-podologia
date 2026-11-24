@@ -1,0 +1,62 @@
+# Cennik opracowany na podstawie oficjalnego cennika z profilu Facebook PZD Podologia.
+# TODO po otrzymaniu oryginalnych plików z Dysku Google: potwierdzić dokładny zakres pozycji „Tamponada, odciążenia, taping”.
+updated: "2026"
+note: "Ceny mają charakter orientacyjny i mogą zależeć od rozległości zmian oraz czasu trwania terapii. Dokładny plan oraz koszt zabiegu omawiany jest zawsze przed jego rozpoczęciem."
+
+groups:
+  - name: "Konsultacja i zabiegi podstawowe"
+    items:
+      - name: "Konsultacja podologiczna"
+        detail: "Wywiad, ocena stanu stóp i paznokci, plan terapii"
+        price: "80 zł"
+      - name: "Obcięcie i opracowanie paznokci"
+        detail: "Prawidłowe skrócenie oraz opracowanie płytki i wałów"
+        price: "150 zł"
+      - name: "Pedicure pielęgnacyjny"
+        detail: "Kompleksowa pielęgnacja zdrowych stóp i paznokci"
+        price: "200 zł"
+      - name: "Pedicure podologiczny"
+        detail: "Specjalistyczne opracowanie stóp problematycznych"
+        price: "250 zł"
+
+  - name: "Terapia skóry stóp"
+    items:
+      - name: "Usunięcie modzeli"
+        detail: "Opracowanie bolesnych i rozległych zrogowaceń"
+        price: "100 – 150 zł"
+      - name: "Usunięcie odcisków"
+        detail: "Precyzyjne usunięcie odcisku wraz z zabezpieczeniem"
+        price: "100 – 160 zł"
+      - name: "Terapia pękających pięt"
+        detail: "Opracowanie rozpadlin, regeneracja i zalecenia domowe"
+        price: "150 zł"
+      - name: "Terapia brodawki wirusowej"
+        detail: "Bezpieczna terapia zmian wirusowych (kurzajek)"
+        price: "120 – 150 zł"
+
+  - name: "Terapia paznokci i ortonyksja"
+    items:
+      - name: "Rekonstrukcja płytki paznokciowej"
+        detail: "Odbudowa uszkodzonego mechanicznie paznokcia"
+        price: "100 zł"
+      - name: "Terapia paznokci pourazowych"
+        detail: "Oczyszczenie i prowadzenie paznokcia po urazie"
+        price: "150 – 200 zł"
+      - name: "Terapia paznokci chorobowych"
+        detail: "M.in. grzybica, onycholiza, onychogryfoza"
+        price: "150 – 200 zł"
+      - name: "Terapia wrastającego / wkręcającego paznokcia"
+        detail: "Usunięcie drażniącego elementu, opatrunek, ulga w bólu"
+        price: "200 zł"
+      - name: "Ortonyksja — klamra tytanowa"
+        detail: "Założenie indywidualnej klamry korygującej tor wzrostu"
+        price: "200 zł"
+      - name: "Przełożenie klamry tytanowej"
+        detail: "Kontrola i przełożenie klamry w trakcie terapii"
+        price: "180 zł"
+
+  - name: "Zabiegi wspomagające"
+    items:
+      - name: "Tamponada, odciążenia, taping"
+        detail: "Ochrona wału paznokciowego i odciążenie miejsc bolesnych (dokładna wycena w gabinecie)"
+        price: "do 50 zł"

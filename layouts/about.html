@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{- $m := site.Params.media -}}
+<section class="page-hero">
+  <div class="container">
+    {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container about-page-grid">
+    <div class="prose">
+      <h2>{{ site.Params.specialistName }}</h2>
+      <p>
+        Jestem absolwentką <strong>Uniwersytetu Medycznego im. Karola Marcinkowskiego w Poznaniu</strong> (2022&ndash;2024). Gabinet <strong>PZD Podologia</strong> w Budziechowie koło Lubska stworzyłam z myślą o pacjentach, którzy oczekują profesjonalnej, rzetelnej i bezbolesnej pomocy w problemach stóp oraz paznokci.
+      </p>
+      <p>
+        Wierzę, że kluczem do skutecznej terapii podologicznej jest <strong>trafna diagnoza</strong> oraz partnerska rozmowa z pacjentem. Podczas każdej wizyty dokładnie tłumaczę, skąd bierze się dany problem &mdash; czy są to nawracające odciski, bolesne pęknięcia pięt, wrastające paznokcie, czy przewlekłe zmiany w obrębie płytki paznokciowej &mdash; i jak wspólnie zadbać o trwałą poprawę.
+      </p>
+      <h3>Standardy higieny i bezpieczeństwa</h3>
+      <ul>
+        <li>Wykorzystanie certyfikowanych materiałów jednorazowych dla każdego pacjenta.</li>
+        <li>Pełny proces mycia, dezynfekcji oraz sterylizacji narzędzi w autoklawie medycznym.</li>
+        <li>Pakiety sterylne otwierane bezpośrednio przed zabiegiem.</li>
+        <li>Szczególna ostrożność i profilaktyka w pracy z pacjentami z grupy ryzyka, w tym osobami chorującymi na cukrzycę.</li>
+      </ul>
+    </div>
+
+    <aside class="about-aside">
+      {{- with $m.clinicInterior }}
+      <figure class="about-photo-card">
+        <img src="{{ . | relURL }}" alt="Wnętrze gabinetu PZD Podologia w Budziechowie k. Lubska" loading="lazy">
+      </figure>
+      {{- end }}
+
+      <div class="info-box">
+        <span class="eyebrow">Kwalifikacje i dane</span>
+        <dl class="info-dl">
+          <div>
+            <dt>Specjalista</dt>
+            <dd>{{ site.Params.specialistName }}</dd>
+          </div>
+          <div>
+            <dt>Wykształcenie</dt>
+            <dd>Uniwersytet Medyczny im. Karola Marcinkowskiego w Poznaniu (2022&ndash;2024)</dd>
+          </div>
+          <div>
+            <dt>Lokalizacja</dt>
+            <dd>{{ site.Params.contact.addressFull }}</dd>
+          </div>
+          <div>
+            <dt>Płatności</dt>
+            <dd>{{ site.Params.contact.payments }}</dd>
+          </div>
+        </dl>
+        <a href="tel:{{ site.Params.contact.phoneHref }}" class="btn btn-primary btn-block">Umów wizytę: {{ site.Params.contact.phoneDisplay }}</a>
+      </div>
+    </aside>
+  </div>
+</section>
+{{ end }}

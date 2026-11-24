@@ -1,0 +1,30 @@
+{{- $pricing := hugo.Data.pricing -}}
+<div class="pricing-grid">
+  {{- range $pricing.groups }}
+  <div class="pricing-group">
+    <h3 class="pricing-group-title">{{ .name }}</h3>
+    <ul class="pricing-list">
+      {{- range .items }}
+      <li class="pricing-row">
+        <div class="pricing-item-info">
+          <span class="pricing-item-name">{{ .name }}</span>
+          {{- with .detail }}
+          <span class="pricing-item-detail">{{ . }}</span>
+          {{- end }}
+        </div>
+        <span class="pricing-item-price">{{ .price }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</div>
+
+<div class="pricing-footnote">
+  <p>{{ $pricing.note }}</p>
+  <div class="pricing-badges">
+    <span class="pill">Płatność: {{ site.Params.contact.payments }}</span>
+    <span class="pill">Odwołanie wizyty: min. 24h wcześniej</span>
+    <span class="pill"><a href="{{ "/regulamin/" | relURL }}">Zobacz regulamin gabinetu &rarr;</a></span>
+  </div>
+</div>
